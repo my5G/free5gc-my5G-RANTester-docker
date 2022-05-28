@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  my5grantester:
+    image: my5grantester:latest
+    container_name: my5grantester
+    privileged: true
+    command: ./app ue
+    volumes:
+      - ./config/tester.yaml:/workspace/my5G-RANTester/config/config.yml
+    cap_add:
+      - NET_ADMIN
+    networks:
+      default:
+        aliases:
+          - tester.free5gc.org
+    healthcheck:
+      test: /bin/bash -c "ip addr | grep uetun1"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+   default:
+        external:
+            name: "free5gc-docker-v306_default"

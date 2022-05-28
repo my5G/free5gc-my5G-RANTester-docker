@@ -1,0 +1,44 @@
+gnodeb:
+  controlif:
+    ip: "tester.free5gc.org"
+    port: 9487
+  dataif:
+    ip: "tester.free5gc.org"
+    port: 2152
+  plmnlist:
+    mcc: "208"
+    mnc: "95"
+    tac: "000001"
+    gnbid: "000003"
+  slicesupportlist:
+    sst: "01"
+    sd: "000001"
+  test: "test-normal-registration"
+
+ue:
+  msin: "0000000043"
+  key: "0C0A34601D4F07677303652C0462535B"
+  opc: "63bfa50ee6523365ff14c1f45f88737d"
+  amf: "8000"
+  sqn: "0000000"
+  dnn: "default"
+  hplmn:
+    mcc: "208"
+    mnc: "95"
+  snssai:
+    sst: 1
+    sd: "000001"
+  integrity:
+    nia0: false
+    nia1: false
+    nia2: true
+  ciphering:
+    nea0: true
+    nea1: false
+    nea2: false
+  test: ""
+
+amfif:
+  ip: "amf.free5gc.org"
+  port: 38412
+  name: "free5gc"
