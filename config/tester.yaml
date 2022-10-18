@@ -36,7 +36,7 @@ ue:
     nea0: true
     nea1: false
     nea2: false
-  test: ""
+  test: "test-5g-guti"
 
 amfif:
   ip: "amf.free5gc.org"
